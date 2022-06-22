@@ -1,10 +1,13 @@
 import 'package:es_flutter_component/es_form/es_checkbox.dart';
 import 'package:es_flutter_component/es_form/es_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:validators/validators.dart';
+
+import 'images/panelConstants.dart';
 
 class EsLogin extends StatefulWidget {
   @override
@@ -37,7 +40,7 @@ class _EsLogin extends State<EsLogin> {
                     )),
                 Form(
                   key: _formkey,
-                  child: Column(
+                  child: _boxShow(Column(
                     children: <Widget>[
                       EsTextField(
                         type: AppLocalizations.of(context)!.username,
@@ -78,7 +81,7 @@ class _EsLogin extends State<EsLogin> {
                         onSaved: (bool? newValue) {},
                       ),
                     ],
-                  ),
+                  )),
                 ),
                 RaisedButton(
                   textColor: Colors.white,
@@ -86,11 +89,28 @@ class _EsLogin extends State<EsLogin> {
                   child: Text(AppLocalizations.of(context)!.login),
                   // child: Text(Translations.of(context).text("login")),
                   onPressed: () {
-                    _formkey.currentState?.validate();
-                    Navigator.pushNamed(context, '/tree');
+                    // if(_formkey.currentState?.validate()==true)
+                    {Navigator.pushNamed(context, '/tree');}
                   },
                 )
               ],
             )));
   }
+  Widget _boxShow(Widget widget) {
+    return BootstrapCol(
+        sizes: 'col-sm-12 col-ml-12 col-lg-6 col-xl-6',
+        child: Container(
+          padding: EdgeInsets.symmetric(
+            horizontal: PanelConstants.paddingDimension,
+            vertical: PanelConstants.paddingDimension,
+          ),
+          margin: EdgeInsets.all(PanelConstants.paddingDimension),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(
+                  Radius.circular(PanelConstants.paddingDimension * 2)),
+              color: PanelConstants.forGround),
+          child: widget,
+        ));
+  }
+
 }

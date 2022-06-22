@@ -1,7 +1,5 @@
 
-import 'package:es_flutter_component/es_table/es_simple_table.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/panel_chart.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/panel_text_sample.dart';
+import 'package:es_flutter_panel_skeleton/drawer/panelItems/panel_initial_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -17,8 +15,8 @@ class CenterScreen extends StatefulWidget {
 
 
 class _CenterScreen extends State<CenterScreen> {
-
-  Widget page=PanelChart();
+//in this line you can initial the first page that it is the page relevent to the first drawer item
+  Widget page=PanelInitialPage();
 
 //function for change page by global key in drawer page
  changePage(currentPage){

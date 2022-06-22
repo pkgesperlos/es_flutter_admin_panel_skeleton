@@ -1,4 +1,3 @@
-
 #1-How to create multi language app(android/ios)
 To use flutter_localizations, add the package as a dependency to your pubspec.yaml file:
 
@@ -114,13 +113,19 @@ It was not able to use FlutterRailSlider because of (accordion items) so,
 a global key is created in (lib/center_screen/center_screen.dart) and it called by current state in 
 (lib/drawer/drawer_page.dart) by changePage() function to change pages.
 as Example:.globalKey.currentState ?.changePage(_buttonNames[index][0].page) in drawer.
+
 #5-How to add pages in drawer
 We have an array like this List=[buttonsInfo,[string,buttonsInfo,buttonsInfo]]=[A,B]
 If we have an item with accordion items(with page context):
 we should set pages in B (String is title of page and buttonInfo is a function with properties of page.)
 else should set pages in A (buttonInfo is a function with properties of page.))
 
-#6-How to change font and theme
+#6-How to initial first page in center
+in lib/center_page.dart=>line21://in this line you can initial the first page
+that it is the page relevant to the first drawer item
+
+
+#7-How to change font and theme
 We divided all font,sizes, and colors into two section :
 
 1-es_flutter_components/Constants.dart//include the  font,sizes, and colors parameters of Components.

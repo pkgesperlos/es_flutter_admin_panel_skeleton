@@ -1,16 +1,4 @@
 import 'package:es_flutter_component/es_text/es_ordinary_text.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/panel_chart.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/Panel_tabel/panel_editable_table.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/panel_button_sample.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/panel_dialog_box.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/panel_form.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/panel_image.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/panel_notification.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/panel_progressbar.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/Panel_tabel/panel_responsive_table.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/panel_slider.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/Panel_tabel/panel_simple_table.dart';
-import 'package:es_flutter_panel_skeleton/drawer/panelItems/panel_text_sample.dart';
 import 'package:flutter/material.dart';
 import '../images/panelConstants.dart';
 import '../center_sceen/center_screen.dart';
@@ -45,87 +33,87 @@ class _DrawerPageState extends State<DrawerPage> {
     //We have an array like this List=[buttonsInfo,[string,buttonsInfo,buttonsInfo]]
     // for acardion and non acardion type
     List<List> _buttonNames = [
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.charts,
-            icon: Icons.bar_chart,
-            page: PanelChart(),
-            pageRout: '/chart'),
-      ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.text,
-            icon: Icons.edit,
-            page: PanelTextSample(),
-            pageRout: '/textSample'),
-      ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.dialogBox,
-            icon: Icons.messenger_outline,
-            page: PanelDialogBox(),
-            pageRout: '/dialog'),
-      ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.button,
-            icon: Icons.radio_button_checked_sharp,
-            page: PanelButtonSample(),
-            pageRout: '/buttonSample'),
-      ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.form,
-            icon: Icons.list_alt,
-            page: PanelForm(),
-            pageRout: '/form')
-      ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.images,
-            icon: Icons.image_outlined,
-            page: PanelImage(),
-            pageRout: '/image')
-      ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.progressBar,
-            icon: Icons.timelapse_rounded,
-            page: PanelProgressBar(),
-            pageRout: '/progressbar')
-      ],
-      [
-        AppLocalizations.of(context)!.tables,
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.simpleTable,
-            icon: Icons.table_chart_outlined,
-            page: PanelSimpleTable(),
-            pageRout: '/simpletable'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.editableTable,
-            icon: Icons.table_rows,
-            page: PanelEditableTable(),
-            pageRout: '/editable'),
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.responsiveTable,
-            icon: Icons.table_chart,
-            page: PanelResponsiveTable(),
-            pageRout: '/responsiveTable')
-      ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.slider,
-            icon: Icons.slideshow_rounded,
-            page: PanelSlider(),
-            pageRout: '/slider')
-      ],
-      [
-        buttonsInfo(
-            title: AppLocalizations.of(context)!.notifications,
-            icon: Icons.notification_important_outlined,
-            page: PanelNotification(),
-            pageRout: '/notification')
-      ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.charts,
+      //       icon: Icons.bar_chart,
+      //       page: PanelChart(),
+      //       pageRout: '/chart'),
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.text,
+      //       icon: Icons.edit,
+      //       page: PanelTextSample(),
+      //       pageRout: '/textSample'),
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.dialogBox,
+      //       icon: Icons.messenger_outline,
+      //       page: PanelDialogBox(),
+      //       pageRout: '/dialog'),
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.button,
+      //       icon: Icons.radio_button_checked_sharp,
+      //       page: PanelButtonSample(),
+      //       pageRout: '/buttonSample'),
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.form,
+      //       icon: Icons.list_alt,
+      //       page: PanelForm(),
+      //       pageRout: '/form')
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.images,
+      //       icon: Icons.image_outlined,
+      //       page: PanelImage(),
+      //       pageRout: '/image')
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.progressBar,
+      //       icon: Icons.timelapse_rounded,
+      //       page: PanelProgressBar(),
+      //       pageRout: '/progressbar')
+      // ],
+      // [
+      //   AppLocalizations.of(context)!.tables,
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.simpleTable,
+      //       icon: Icons.table_chart_outlined,
+      //       page: PanelSimpleTable(),
+      //       pageRout: '/simpletable'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.editableTable,
+      //       icon: Icons.table_rows,
+      //       page: PanelEditableTable(),
+      //       pageRout: '/editable'),
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.responsiveTable,
+      //       icon: Icons.table_chart,
+      //       page: PanelResponsiveTable(),
+      //       pageRout: '/responsiveTable')
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.slider,
+      //       icon: Icons.slideshow_rounded,
+      //       page: PanelSlider(),
+      //       pageRout: '/slider')
+      // ],
+      // [
+      //   buttonsInfo(
+      //       title: AppLocalizations.of(context)!.notifications,
+      //       icon: Icons.notification_important_outlined,
+      //       page: PanelNotification(),
+      //       pageRout: '/notification')
+      // ],
     ];
     List _acardionList = [];
     for (int i = 0; i < _buttonNames.length; i++) {
